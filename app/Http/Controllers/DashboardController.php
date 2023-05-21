@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Wisata;
+use App\Models\DataWisata;
 
 class DashboardController extends Controller
 {
@@ -14,8 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard.index', [
-            'wisata' => Wisata::all(),
-
+            'wisata' => DataWisata::all(),
         ]);
     }
 }
